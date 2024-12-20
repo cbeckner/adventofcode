@@ -308,13 +308,7 @@ static void Day5()
         if (ruleDict.ContainsKey(rule.Key)) { continue; }
         ruleDict.Add(rule.Key, rules.Where(x => x.Key == rule.Key).Select(x => x.Value).ToArray());
     }
-    // The first section specifies the page ordering rules, one per line. The first rule, 47 | 53, means that if an
-    // update includes both page number 47 and page number 53, then page number 47 must be printed at some point before page
-    // number 53. (47 doesn't necessarily need to be immediately before 53; other pages are allowed to be between them.)
 
-    // The second section specifies the page numbers of each update.Because most safety manuals are different, the pages
-    // needed in the updates are different too.The first update, 75, 47, 61, 53, 29, means that the
-    // update consists of page numbers 75, 47, 61, 53, and 29.
     var safeUpdates = new List<int[]>();
     var unsafeUpdates = new List<int[]>();
     foreach (var update in updates)
