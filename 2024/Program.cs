@@ -8,6 +8,7 @@ Day4();
 Day5();
 Day6();
 
+#region Day 1
 static void Day1()
 {
     // load content/day1/input.txt into a string array
@@ -38,7 +39,9 @@ static void Day1()
     }
     Console.WriteLine($"Day 1 = Distance:{distance}, Similarity: {similarity}");
 }
+#endregion
 
+#region Day 2
 static void Day2Alt()
 {
     // load content/day2/sample.txt into a string array
@@ -115,7 +118,9 @@ static bool Day2IsSafe(List<int> arr)
 
     return allPositive || allNegative;
 }
+#endregion
 
+#region Day 3
 static void Day3()
 {
     // load content/day2/sample.txt into a string array
@@ -156,7 +161,9 @@ static void Day3()
 
     Console.WriteLine($"Day 3 = Total: {result}.  Filtered Total: {filteredResult}");
 }
+#endregion
 
+#region Day 4
 static void Day4()
 {
     // load content/day4/input.txt into a string array
@@ -278,7 +285,9 @@ static void Day4()
     }
     Console.WriteLine($"Day 4 = Total: {xmasCount}. X-Mas Total: {xMasCount}");
 }
+#endregion
 
+#region Day 5
 static void Day5()
 {
     string[] lines = File.ReadAllLines("content/day5/input.txt");
@@ -414,7 +423,9 @@ static T[] SwapValues<T>(T[] source, int index1, int index2)
     source[index2] = temp;
     return source;
 }
+#endregion
 
+#region Day 6
 static void Day6()
 {
     string[] lines = File.ReadAllLines("content/day6/input.txt");
@@ -571,3 +582,4 @@ struct Guard()
         }
     }
 }
+#endregion
